@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName">
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname/Family Name</label>
+                <input type="text" id="surname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div id="genderError" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                    <option value="">--Please choose a country--</option>
+                    <option value="USA">United States</option>
+                    <option value="CAN">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="AUS">Australia</option>
+                    <option value="PAK">Pakistan</option>
+                </select>
+            </div>
+            <div class="form-group terms-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" id="submitButton" disabled>Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
