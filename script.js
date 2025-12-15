@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         email: false,
         password: false,
         confirmPassword: false,
-        gender: false,
+        gender: true,
         country: false,
-        terms: false,
+        terms: true,
     };
 
     // --- UTILITY FUNCTIONS ---
@@ -178,7 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
         summaryDiv.appendChild(genderP);
 
         form.reset();
-        Object.keys(validationStatus).forEach(key => validationStatus[key] = false);
+        Object.keys(validationStatus).forEach(key => {
+            validationStatus[key] = false
+        });
+        validationStatus.gender = true;
+        validationStatus.terms = true;
         checkFormValidity();
     });
+
+    checkFormValidity();
 });
